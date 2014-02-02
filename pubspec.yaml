@@ -1,0 +1,4 @@
+name: Dartra
+description: Small Dart demo application, created at Dart Flight School in Vienna on Feb 1st, 2014.
+dependencies:
+  redis_client: any
