@@ -1,12 +1,12 @@
 import 'dart:async' show Future;
 import 'dart:convert';
 import 'dart:io';
-import "package:redis_client/redis_client.dart";
+import 'package:redis_client/redis_client.dart';
 
 final InternetAddress HOST = InternetAddress.LOOPBACK_IP_V4;
 final int PORT = 4040;
 
-final String REDIS_CONNECTION = "localhost:6379";
+final String REDIS_CONNECTION = 'localhost:6379';
 
 void main() {
   new Dartra(HOST, PORT, REDIS_CONNECTION);
@@ -88,7 +88,7 @@ class Dartra {
   void finishRequest(HttpResponse response, String output, int statusCode) {
     response.statusCode = statusCode;
     if (output != null) {
-      response.headers.contentType = new ContentType("application", "json", charset: "utf-8");
+      response.headers.contentType = new ContentType('application', 'json', charset: 'utf-8');
       response.write(output);
     }
     response.close();
